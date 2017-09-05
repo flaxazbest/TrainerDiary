@@ -6,6 +6,14 @@ import javax.persistence.*;
 @Table(name = "exercises")
 public class Exercise {
 
+    public Exercise(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    public Exercise() {
+    }
+
     @Id
     @Column(name = "ID_exercise")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
